@@ -9,6 +9,7 @@ import { SignupComponent } from './examples/signup/signup.component';
 import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { GardenComponent } from './garden/garden.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes =[
     { path: 'signup',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'navbar',           component: NavbarComponent}
+    { path: 'navbar',           component: NavbarComponent},
+    { path: 'garden',           component: GardenComponent} 
 ];
 
 @NgModule({
