@@ -47,28 +47,13 @@ export class NavbarComponent implements OnInit {
             this.sidebarClose();
         }
     };
-    isHome() {
+    isHome() : boolean {
       var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '#'){
-          titlee = titlee.slice( 1 );
-      }
-        if( titlee === '/home' ) {
-            return true;
+        return ( titlee === '/home' ) || titlee === '#/home';
         }
-        else {
-            return false;
-        }
-    }
-    isDocumentation() {
+
+    isDocumentation() : boolean {
       var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '#'){
-          titlee = titlee.slice( 1 );
-      }
-        if( titlee === '/documentation' ) {
-            return true;
-        }
-        else {
-            return false;
-        }
+      return titlee === '/documentation'|| titlee === '#/documentation';
     }
 }
